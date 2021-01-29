@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nxegghead/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
+      "@nxegghead/store/util-formaters": [
+        "libs/store/util-formaters/src/index.ts"
+      ],
+      "@nxegghead/store/feature-game-detail": [
+        "libs/store/feature-game-detail/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

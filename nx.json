@@ -1,14 +1,9 @@
 {
   "npmScope": "nxegghead",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -16,16 +11,22 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "accessToken": "YzdkMjhkNDItOTUxNC00YmE3LTkxNjYtNTc1ZmMxNTVkNThifHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "store": { "tags": [] },
+    "store-e2e": { "tags": [], "implicitDependencies": ["store"] },
+    "store-ui-shared": { "tags": [] },
+    "store-util-formaters": { "tags": [] },
+    "store-feature-game-detail": { "tags": [] },
+    "api": { "tags": [] },
+    "api2": { "tags": [] }
+  }
 }
